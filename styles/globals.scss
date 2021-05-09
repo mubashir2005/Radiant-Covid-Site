@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Import Inter from google fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;800;900&display=swap');
+
+@layer base {
+  *, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+
+  .close {
+    @apply dark:bg-white
+  }
+
+  body {
+    @apply bg-black;
+  }
+}
+
+
+.twitter-tweet {
+  margin: 30px auto 10px !important;
+}
