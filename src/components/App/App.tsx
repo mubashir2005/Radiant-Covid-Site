@@ -26,9 +26,8 @@ function App() {
 
   return (
     <div className={"flex justify-center flex-col pb-4"}>
-
       {loading && <Spinner />}
-      {tweets.tweets.map((tweet:any) => (
+      {tweets.tweets.map((tweet) => (
         <Tweet
           tweetId={tweet.id}
           key={tweet.id}

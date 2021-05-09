@@ -36,47 +36,47 @@ function Header() {
   };
   const handleOxygen = () => {
     setQuery(
-        `${COVID_19_INDIA} #Oxygen #Patna #OxygenCylinder #Covid19IndiaHelp #Verified`
+        `${COVID_19_INDIA} #Oxygen #Patna #OxygenCylinder #Verified`
     );
   };
   const handleOxygenConcentrator = () => {
     setQuery(
-        `${COVID_19_INDIA} #Oxygen #Patna #Covid19IndiaHelp #OxygenConcentrator  `
+        `${COVID_19_INDIA} #Oxygen #Patna #OxygenConcentrator  `
     );
   };
   const handleVentilator = () => {
     setQuery(
-        `${COVID_19_INDIA} #Patna  #Covid19IndiaHelp #Ventilator #BedsAvailable `
+        `${COVID_19_INDIA} #Patna #Ventilator #BedsAvailable `
     );
   };
   const handleAmbulance = () => {
     setQuery(
-        `${COVID_19_INDIA}#Patna  #Covid19IndiaHelp #ambulance `
+        `${COVID_19_INDIA}#Patna #ambulance `
     );
   };
   const handlePlasma = () => {
     setQuery(
-        `${COVID_19_INDIA} #plasma #Patna  #covidblood  #Covid19IndiaHelp  `
+        `${COVID_19_INDIA} #plasma #Patna  `
     );
   };
   const handleRemedesivir = () => {
     setQuery(
-        `${COVID_19_INDIA} #Remedesivir #Patna  #Covid19IndiaHelp  `
+        `${COVID_19_INDIA} #Remedesivir #Patna`
     );
   };
   const handleICU = () => {
     setQuery(
-        `${COVID_19_INDIA}#Patna  #Covid19IndiaHelp #ICUbeds #BedsAvailable`
+        `${COVID_19_INDIA}#Patna #ICUbeds #BedsAvailable`
     );
   };
   const handleFabiflu = () => {
     setQuery(
-        `${COVID_19_INDIA} #fabiflu #Patna  #Covid19IndiaHelp  `
+        `${COVID_19_INDIA} #fabiflu #Patna `
     );
   };
   const handleOximeter = () => {
     setQuery(
-        `${COVID_19_INDIA} #Patna #Covid19IndiaHelp  #Oximeter  `
+        `${COVID_19_INDIA} #Patna  #Oximeter  `
     );
   };
   return (
@@ -106,7 +106,6 @@ function Header() {
           disableUnderline
           value={query.split(COVID_19_INDIA)[1]}
           onChange={(event) => handleQueryChange(event.target.value)}
-          placeholder={'Select a medical resource'}
         />
         <CloseButton
           className={"close"}
@@ -124,8 +123,6 @@ function Header() {
           <MenuItem value={60} onClick={handleFabiflu}>Fabiflu</MenuItem>
           <MenuItem value={70} onClick={handleAmbulance}>Ambulance</MenuItem>
           <MenuItem value={80} onClick={handleICU}>ICU Beds</MenuItem>
-
-
         </Select>
       </div>
     </header>
