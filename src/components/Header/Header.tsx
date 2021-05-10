@@ -82,7 +82,7 @@ function Header() {
   return (
     <header
       className={
-        "border border-gray-200 py-4 px-1 md:px-8 flex flex-row items-center bg-black bg-opacity-40 text-white dark:border-0"
+        "border border-gray-200 py-4 px-1 md:px-8 flex flex-row items-center bg-gray-200 bg-opacity-40 dark:text-white dark:border-0 header"
       }
     >
       <p
