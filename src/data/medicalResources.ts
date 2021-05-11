@@ -15,7 +15,7 @@ const medicalResources: MedicalResource[] = [
     displayName: "#ambulance",
   },
   {
-    name: "#Patna #covidblood #plasma ",
+    name: "#Patna #covidblood",
     imageUrl: "/images/plasma.jpg",
     displayName: "#plasma",
   },

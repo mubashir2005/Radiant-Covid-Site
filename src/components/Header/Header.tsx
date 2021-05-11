@@ -33,14 +33,14 @@ const ResponsiveParagraph = styled.p`
 `;
 
 function Header() {
+  //@ts-ignore
   const [query, setQuery] = useRecoilState(queryState);
   //@ts-ignore
   const [filters, setFilters] = useRecoilState(filtersState);
 
-  const isQuery = query.split(`${COVID_19_INDIA}`)[1].length != 0;
 
   const handleQueryChange = (query: string) => {
-    setQuery(`${COVID_19_INDIA}${query}`);
+    setQuery(`${query}`);
   };
 
   return (
@@ -83,7 +83,7 @@ function Header() {
           onChange={(event) => handleQueryChange(event.target.value)}
         />
 
-        {isQuery && (
+        { (
           <CloseButton
             className={"close"}
             onClick={() => {
