@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { useRecoilState } from "recoil";
 import Spinner from "../Spinner/Spinner";
 import queryState from "../../atoms/query";
 import useSearchTweets from "../../hooks/useSearchTweets";
 import tweetsState from "../../atoms/tweets";
 import { KeyboardArrowDown } from "@material-ui/icons";
+import { useRecoilState } from "recoil";
 
 /*
  *   load more should not appear when the initial  things are loading i.e when there ain't any tweets.

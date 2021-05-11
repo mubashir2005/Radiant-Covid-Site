@@ -14,13 +14,26 @@
   }
 
   .close {
-    @apply bg-white
+    @apply dark:bg-white
   }
-.header{
-  background-color: #ecbcb4;
-}
+
   body {
-    @apply bg-gray-900;
+    background-color: #000;
+  }
+}
+
+@layer utilities {
+  .color-gray {
+    color: #D9D9D9;
+  }
+
+  .background-gray {
+    background-color: #202327;
+  }
+
+  .border-gray {
+    border: none;
+    border-bottom: 1px solid #202327;
   }
 }
 

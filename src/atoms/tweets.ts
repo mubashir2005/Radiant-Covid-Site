@@ -1,14 +1,12 @@
 import { atom } from "recoil";
 import { GetTweet } from "../server/typeDefs/typescript-types";
 
-const tweetsState = atom<{
-  tweets: GetTweet[];
-  loading: boolean;
-  error: Error | null;
-}>({
-  key: "tweets",
+const initialTweets = [] as GetTweet[];
+
+const tweetsState = atom<TweetsState>({
+  key: "medical resources",
   default: {
-    tweets: [],
+    tweets: initialTweets,
     loading: false,
     error: null,
   },

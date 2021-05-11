@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
-import {IconButton, Input, MenuItem} from "@material-ui/core";
+import React from "react";
+import { IconButton, Input } from "@material-ui/core";
 import ClearIcon from "@material-ui/icons/Clear";
 import styled from "styled-components";
-import { useRecoilState } from "recoil";
 import queryState from "../../atoms/query";
-import useSearchTweets from "../../hooks/useSearchTweets";
 import { COVID_19_INDIA } from "../../constants";
-import Select from '@material-ui/core/Select';
+import { Search } from "@material-ui/icons";
+import filtersState from "../../atoms/filters";
+import { useRecoilState } from "recoil";
+import medicalResources from "../../data/medicalResources";
 
 const CloseButton = styled(IconButton)`
   padding: 3px !important;
-  color: gray;
   outline: none;
 
   &:focus {
@@ -22,108 +22,78 @@ const CloseButton = styled(IconButton)`
   }
 `;
 
+const SearchInput = styled(Input)`
+  color: #d9d9d9 !important;
+  caret-color: #d9d9d9;
+`;
+
+const ResponsiveParagraph = styled.p`
+  @media only screen and (max-width: 620px) {
+    display: none;
+  }
+`;
+
 function Header() {
   const [query, setQuery] = useRecoilState(queryState);
+  const [filters, setFilters] = useRecoilState(filtersState);
 
-  const { searchTweets } = useSearchTweets(query);
-
-  useEffect(() => {
-    searchTweets();
-  }, [query]);
+  const isQuery = query.split(`${COVID_19_INDIA}`)[1].length != 0;
 
   const handleQueryChange = (query: string) => {
     setQuery(`${COVID_19_INDIA}${query}`);
   };
-  const handleOxygen = () => {
-    setQuery(
-        `${COVID_19_INDIA} #Oxygen #Patna #OxygenCylinder #Verified`
-    );
-  };
-  const handleOxygenConcentrator = () => {
-    setQuery(
-        `${COVID_19_INDIA} #Oxygen #Patna #OxygenConcentrator  `
-    );
-  };
-  const handleVentilator = () => {
-    setQuery(
-        `${COVID_19_INDIA} #Patna #Ventilator #BedsAvailable `
-    );
-  };
-  const handleAmbulance = () => {
-    setQuery(
-        `${COVID_19_INDIA}#Patna #ambulance `
-    );
-  };
-  const handlePlasma = () => {
-    setQuery(
-        `${COVID_19_INDIA} #plasma #Patna #covidblood   `
-    );
-  };
-  const handleRemedesivir = () => {
-    setQuery(
-        `${COVID_19_INDIA} #Remedesivir #Patna`
-    );
-  };
-  const handleICU = () => {
-    setQuery(
-        `${COVID_19_INDIA}#Patna #ICUbeds #BedsAvailable`
-    );
-  };
-  const handleFabiflu = () => {
-    setQuery(
-        `${COVID_19_INDIA} #fabiflu #Patna `
-    );
-  };
-  const handleOximeter = () => {
-    setQuery(
-        `${COVID_19_INDIA} #Patna  #Oximeter  `
-    );
-  };
+
   return (
     <header
       className={
-        "border-0 py-4 px-1 md:px-8 flex flex-row items-center bg-black bg-opacity-30 text-white dark:border-0"
+        "py-4 px-1 md:px-8 flex flex-row items-center border border-1 border-gray"
       }
     >
       <p
         className={
-          "text-2xl md:text-3xl lg:text-4xl text-gray font-bold justify-self-start text-white "
+          "text-2xl md:text-3xl lg:text-4xl font-bold justify-self-start color-gray"
         }
       >
-        Tweeties
+        Radico
       </p>
 
       <div
         className={
-          "m-auto w-3/5 md:w-4/6 flex justify-between items-center border-2 rounded-xl py-1 px-3 text-white bg-gray-700"
+          "m-auto w-3/5 md:w-4/6 flex justify-between items-center rounded-xl py-1 px-3 background-gray"
         }
       >
-        <p className={"flex items-center mr-2 bg-gray-900"}>
-          {COVID_19_INDIA}
-        </p>
-        <Input
-          className={"flex-grow -mb-0.5 bg-gray-700"}
+        <Search className={"color-gray"} />
+        <ResponsiveParagraph
+          className={
+            "flex items-center mx-2 color-gray whitespace-wrap lg:whitespace-nowrap"
+          }
+        >
+          {/* {COVID_19_INDIA}{" "} */}
+          {/* {filters
+            .map((filter) => {
+              for (let resource of medicalResources)
+                if (resource.name === filter) return resource.displayName;
+            })
+            .join(" ")} */}
+        </ResponsiveParagraph>
+        <SearchInput
+          className={"flex-grow -mb-0.5"}
           disableUnderline
-          value={query.split(COVID_19_INDIA)[1]}
+          placeholder={"Search"}
           onChange={(event) => handleQueryChange(event.target.value)}
         />
-        <CloseButton
-          className={"close"}
-          onClick={() => setQuery(COVID_19_INDIA)}
-        >
-          <ClearIcon style={{ color: "black !important" }} />
-        </CloseButton>
-        <Select >
-          <MenuItem value={10} onClick={handleOxygen}>Oxygen Cylinder</MenuItem>
-          <MenuItem value={20} onClick={handleOxygenConcentrator}>Oxygen Concentrator</MenuItem>
-          <MenuItem value={30} onClick={handleVentilator}>Ventilator</MenuItem>
-          <MenuItem value={40} onClick={handleOximeter}>Oximeter</MenuItem>
-          <MenuItem value={50} onClick={handleRemedesivir}>Remedesivir</MenuItem>
-          <MenuItem value={50} onClick={handlePlasma}>Plasma</MenuItem>
-          <MenuItem value={60} onClick={handleFabiflu}>Fabiflu</MenuItem>
-          <MenuItem value={70} onClick={handleAmbulance}>Ambulance</MenuItem>
-          <MenuItem value={80} onClick={handleICU}>ICU Beds</MenuItem>
-        </Select>
+
+        {isQuery && (
+          <CloseButton
+            className={"close"}
+            onClick={() => {
+              setQuery(COVID_19_INDIA);
+              setFilters([]);
+            }}
+          >
+            <ClearIcon className={"color-gray"} />
+          </CloseButton>
+        )}
       </div>
     </header>
   );

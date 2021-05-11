@@ -1,37 +1,60 @@
 import React, { useEffect, useState } from "react";
-import { useRecoilState } from "recoil";
 import tweetsState from "../../atoms/tweets";
 import Spinner from "../Spinner/Spinner";
 import LoadMore from "./LoadMore";
-import { Tweet } from "react-twitter-widgets";
-
+import { VisualPicker } from "react-rainbow-components";
+import ResourceOption from "../ResourceOption/ResourceOption";
+import useSearchTweets from "../../hooks/useSearchTweets";
+import queryState from "../../atoms/query";
+import filtersState from "../../atoms/filters";
+import medicalResources from "../../data/medicalResources";
+import { useRecoilState } from "recoil";
+import Tweet from "../Tweet/Tweet";
 
 function App() {
-
   const [tweets] = useRecoilState(tweetsState);
+  const [query] = useRecoilState(queryState);
   const [loading, setLoading] = useState<boolean>(true);
+  const [filters, setFilters] = useRecoilState(filtersState);
+
+  const { searchTweets } = useSearchTweets(query);
+
+  useEffect(() => {
+    searchTweets();
+  }, [query, filters]);
 
   useEffect(() => {
     if (tweets.loading) setLoading(true);
   }, [tweets.loading, loading]);
 
-  useEffect(() => {
-    console.log("Tweets", tweets);
-  }, [tweets]);
-
-  const tweetOptions = {
-    theme: "dark",
+  const handleMedicalResourcesChange = (filter: any) => {
+    setFilters(filter);
   };
-
 
   return (
     <div className={"flex justify-center flex-col pb-4"}>
+      <div className={"flex flex-row justify-center"} style={{ marginTop: 30 }}>
+        <VisualPicker
+          id="visual-picker-component-1"
+          multiple
+          // @ts-ignore
+          value={filters}
+          onChange={handleMedicalResourcesChange}
+        >
+          {medicalResources.map((resource, index) => (
+            <ResourceOption
+              key={index}
+              name={resource.name}
+              imageUrl={resource.imageUrl}
+            />
+          ))}
+        </VisualPicker>
+      </div>
       {loading && <Spinner />}
       {tweets.tweets.map((tweet) => (
         <Tweet
           tweetId={tweet.id}
           key={tweet.id}
-          options={tweetOptions}
           onLoad={() => setLoading(false)}
         />
       ))}

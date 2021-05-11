@@ -1,6 +1,6 @@
 import React, { CSSProperties } from "react";
 import Lottie, { Options } from "react-lottie";
-import spinner from "../../lottie/ios-loader.json";
+import spinner from "../../lottie/spinner.json";
 
 interface Props {
   height?: number;
@@ -21,7 +21,7 @@ function Spinner({ height, width, style }: Props) {
     ...style,
   };
 
-  const dimensions: number = 40;
+  const dimensions: number = 60;
 
   return (
     <Lottie
