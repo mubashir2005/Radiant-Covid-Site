@@ -38,7 +38,6 @@ function Header() {
   //@ts-ignore
   const [filters, setFilters] = useRecoilState(filtersState);
 
-
   const handleQueryChange = (query: string) => {
     setQuery(`${query}`);
   };
@@ -77,23 +76,24 @@ function Header() {
             .join(" ")} */}
         </ResponsiveParagraph>
         <SearchInput
+          id={"search "}
           className={"flex-grow -mb-0.5"}
           disableUnderline
           placeholder={"Search"}
           onChange={(event) => handleQueryChange(event.target.value)}
         />
-
-        { (
+        {
           <CloseButton
             className={"close"}
             onClick={() => {
               setQuery(COVID_19_INDIA);
-              setFilters([]);
+              //@ts-ignore
+              setFilters([])
             }}
           >
             <ClearIcon className={"color-gray"} />
           </CloseButton>
-        )}
+        }
       </div>
     </header>
   );

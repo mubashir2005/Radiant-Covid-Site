@@ -15,12 +15,12 @@ const medicalResources: MedicalResource[] = [
     displayName: "#ambulance",
   },
   {
-    name: "#Patna #covidblood",
+    name: "Plasma available Patna",
     imageUrl: "/images/plasma.jpg",
     displayName: "#plasma",
   },
   {
-    name: "#Remedesivir #Patna",
+    name: "Remedesivir available Patna",
     imageUrl: "/images/remedesivir.jpg",
     displayName: "#Remedesivir",
   },
@@ -35,7 +35,7 @@ const medicalResources: MedicalResource[] = [
     displayName: "#fabiflu",
   },
   {
-    name: "#Patna #Oximeter",
+    name: "Oximeter Patna ",
     imageUrl: "/images/oximeter.jpg",
     displayName: "#Oximeter",
   },
