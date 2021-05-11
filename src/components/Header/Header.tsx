@@ -8,6 +8,7 @@ import { Search } from "@material-ui/icons";
 import filtersState from "../../atoms/filters";
 import { useRecoilState } from "recoil";
 
+//@ts-nocheck
 const CloseButton = styled(IconButton)`
   padding: 3px !important;
   outline: none;
@@ -34,6 +35,7 @@ const ResponsiveParagraph = styled.p`
 
 function Header() {
   const [query, setQuery] = useRecoilState(queryState);
+  //@ts-ignore
   const [filters, setFilters] = useRecoilState(filtersState);
 
   const isQuery = query.split(`${COVID_19_INDIA}`)[1].length != 0;
