@@ -56,7 +56,7 @@ function Header() {
   };
   const handlePlasma = () => {
     setQuery(
-        `${COVID_19_INDIA} #plasma #Patna  `
+        `${COVID_19_INDIA} #plasma #Patna #covidblood   `
     );
   };
   const handleRemedesivir = () => {
