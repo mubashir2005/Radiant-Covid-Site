@@ -8,7 +8,6 @@ import { Search } from "@material-ui/icons";
 import filtersState from "../../atoms/filters";
 import { useRecoilState } from "recoil";
 
-//@ts-nocheck
 const CloseButton = styled(IconButton)`
   padding: 3px !important;
   outline: none;
