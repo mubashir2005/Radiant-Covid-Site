@@ -7,7 +7,6 @@ import { COVID_19_INDIA } from "../../constants";
 import { Search } from "@material-ui/icons";
 import filtersState from "../../atoms/filters";
 import { useRecoilState } from "recoil";
-import medicalResources from "../../data/medicalResources";
 
 const CloseButton = styled(IconButton)`
   padding: 3px !important;
