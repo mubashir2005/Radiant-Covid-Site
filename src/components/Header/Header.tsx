@@ -82,12 +82,12 @@ function Header() {
   return (
     <header
       className={
-        "border border-gray-200 py-4 px-1 md:px-8 flex flex-row items-center dark:bg-black dark:bg-opacity-30 bg-opacity-40 text-white dark:border-0"
+        "border-0 py-4 px-1 md:px-8 flex flex-row items-center bg-black bg-opacity-30 text-white dark:border-0"
       }
     >
       <p
         className={
-          "text-2xl md:text-3xl lg:text-4xl text-gray font-bold justify-self-start dark:text-white "
+          "text-2xl md:text-3xl lg:text-4xl text-gray font-bold justify-self-start text-white "
         }
       >
         Tweeties
@@ -95,14 +95,14 @@ function Header() {
 
       <div
         className={
-          "m-auto w-3/5 md:w-4/6 flex justify-between items-center border-2 border-gray-300 rounded-xl py-1 px-3 dark:text-white dark:bg-gray-700"
+          "m-auto w-3/5 md:w-4/6 flex justify-between items-center border-2 rounded-xl py-1 px-3 text-white bg-gray-700"
         }
       >
-        <p className={"flex items-center mr-2 dark:bg-gray-900"}>
+        <p className={"flex items-center mr-2 bg-gray-900"}>
           {COVID_19_INDIA}
         </p>
         <Input
-          className={"flex-grow -mb-0.5 dark:bg-gray-700"}
+          className={"flex-grow -mb-0.5 bg-gray-700"}
           disableUnderline
           value={query.split(COVID_19_INDIA)[1]}
           onChange={(event) => handleQueryChange(event.target.value)}
