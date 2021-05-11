@@ -9,7 +9,7 @@ const Creators = () => {
         <strong>Mohammed Mubashir Hasan</strong>
       </p>
       <Image src="/mubashir.png" alt="Mubashir" width={100} height={100} />
-      <p className="Creators__tech__lead">
+      <p className="Creators__other__tech__guy">
         <strong>Madhav Anand</strong>
       </p>
       <Image src="/madhav.png" alt="Madhav" width={100} height={100} />
