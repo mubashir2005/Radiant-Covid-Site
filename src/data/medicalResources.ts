@@ -35,7 +35,7 @@ const medicalResources: MedicalResource[] = [
     displayName: "#fabiflu",
   },
   {
-    name: "Oximeter Patna ",
+    name: "#Oximeter #Patna ",
     imageUrl: "/images/oximeter.jpg",
     displayName: "#Oximeter",
   },
