@@ -7,6 +7,7 @@ import { COVID_19_INDIA } from "../../constants";
 import { Search } from "@material-ui/icons";
 import filtersState from "../../atoms/filters";
 import { useRecoilState } from "recoil";
+import { Nav } from "react-bootstrap";
 
 const CloseButton = styled(IconButton)`
   padding: 3px !important;
@@ -53,7 +54,7 @@ function Header() {
           "text-2xl md:text-3xl lg:text-4xl font-bold justify-self-start color-gray"
         }
       >
-        Radico
+        Radiant Covid
       </p>
 
       <div
@@ -95,6 +96,8 @@ function Header() {
           </CloseButton>
         }
       </div>
+      <Nav.Link href="/About" className={"text-white mr-auto"}>About</Nav.Link>
+
     </header>
   );
 }

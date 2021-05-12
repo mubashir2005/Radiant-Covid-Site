@@ -7,7 +7,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital@1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @layer base {
   *,
   body {
@@ -25,14 +25,14 @@
     background-color: #000;
   }
   .about {
-    background-color: #0096c7;
-    color: #e5e5e5;
+    background-color: #fde8e9;
+    color: #0D1F22;
     padding: 400px;
   }
   .about__header {
     font-size: 40px;
     margin-bottom: 20px;
-    font-family: "Newsreader", serif;
+    font-family: "Monserrat",sans-serif;
   }
   .about__subtitle {
     font-size: 20px;
@@ -42,11 +42,17 @@
     font-size: 22px;
     line-height: 1.5;
   }
+  .about__body__creators{
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .about__body__feedback{
+    margin-top: 30px;
+  }
   .Creators {
-    background-color: #90e0ef;
+    background-color: #0D1F22;
     color: #caf0f8;
     padding: 400px;
-    font-weight: bold;
   }
   .Creators__header {
     font-size: 50px;
@@ -54,20 +60,46 @@
   }
   .Creators__tech__lead {
     font-size: 30px;
+    font-weight: bold;
   }
   .Creators__other__tech__guy {
     font-size: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  .Creators__dev{
+    margin-top: 50px;
+  }
+  .Creators__something{
+    margin-top: 30px;
+  }
+  .Creators__image{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 20px;
   }
   @media only screen and (max-width: 600px) {
     .about {
       padding: 50px;
       padding-bottom: 150px;
     }
+    .Creators {
+      padding: 50px;
+      padding-bottom: 150px;
+    }
+    .Creators__image{
+      margin:auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   }
   @media only screen and (min-width: 768px) and(max-width: 1024px) {
     .about {
       padding: 250px;
       padding-bottom: 600px;
+    }
+    .Creators{
+      padding: 250px;
     }
   }
 }

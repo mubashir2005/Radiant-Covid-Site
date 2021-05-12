@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Create next app</title>
+        <title>Radiant Covid</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <RecoilRoot>
