@@ -20,7 +20,7 @@ const medicalResources: MedicalResource[] = [
     displayName: "#plasma",
   },
   {
-    name: "#Remedesivir#Patna",
+    name: "#Remedesivir #Patna",
     imageUrl: "/images/remedesivir.jpg",
     displayName: "#Remedesivir",
   },
