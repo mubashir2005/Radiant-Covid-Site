@@ -25,7 +25,7 @@ const resolvers = {
           data: { statuses: tweets },
         }: Response = (await Twitter.get("/search/tweets", {
           q: query,
-          count: 20,
+          count: 10,
           since_id: lastTweet || undefined,
         })) as Response;
 
