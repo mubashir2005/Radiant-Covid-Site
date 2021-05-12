@@ -10,7 +10,7 @@ const medicalResources: MedicalResource[] = [
     displayName: "#Ventilator",
   },
   {
-    name: "#Patna #ambulance",
+    name: "#Patna #Ambulance",
     imageUrl: "/images/ambulance.jpg",
     displayName: "#ambulance",
   },
