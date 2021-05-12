@@ -15,12 +15,12 @@ const medicalResources: MedicalResource[] = [
     displayName: "#ambulance",
   },
   {
-    name: "#Plasma #Patna available",
+    name: "#Plasma #Patna ",
     imageUrl: "/images/plasma.jpg",
     displayName: "#plasma",
   },
   {
-    name: "#Remedesivir available #Patna",
+    name: "#Remedesivir#Patna",
     imageUrl: "/images/remedesivir.jpg",
     displayName: "#Remedesivir",
   },
