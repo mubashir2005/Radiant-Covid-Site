@@ -15,30 +15,30 @@ interface Output {
 }
 
 const useSearchTweets = (
-  query: string,
-  lastTweet?: boolean,
-  wait?: number
+    query: string,
+    lastTweet?: boolean,
+    wait?: number
 ): Output => {
   const [getTweets, { data, error, loading }] = useLazyQuery(GET_TWEETS);
   const [filters] = useRecoilState(filtersState);
   const [tweets, setTweets] = useRecoilState(tweetsState);
 
   const searchTweets = useCallback(
-    debounce(() => {
-      const lastTweetId = tweets.tweets.length
-        ? tweets.tweets[tweets.tweets.length - 1].id
-        : undefined;
+      debounce(() => {
+        const lastTweetId = tweets.tweets.length
+            ? tweets.tweets[tweets.tweets.length - 1].id
+            : undefined;
 
-      getTweets({
-        variables: {
-          tweet: {
-            query: `${query} ${filters.join(" ")}`,
-            lastTweet: lastTweet ? lastTweetId : undefined,
+        getTweets({
+          variables: {
+            tweet: {
+              query: `${query} ${filters.join(" ")}`,
+              lastTweet: lastTweet ? lastTweetId : undefined,
+            },
           },
-        },
-      });
-    }, wait || 200),
-    [query, lastTweet, tweets, filters]
+        });
+      }, wait || 200),
+      [query, lastTweet, tweets, filters]
   );
 
   useEffect(() => {

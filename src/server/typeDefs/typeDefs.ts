@@ -11,6 +11,17 @@ const typeDefs = gql`
   ) on FIELD_DEFINITION
 
 
+  type Query {
+    hi: String!
+      @rateLimit(
+        window: "1s"
+        max: 10
+        message: "You are doing that too often."
+      )
+    tweets(input: TweetsInput!): [Tweet]!
+      @rateLimit(window: "1s", max: 5, message: "You are doing that too often.")
+  }
+
   type Url {
     url: String!
     expanded_url: String
