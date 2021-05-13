@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           "A website to help covid patients and let them find relevant information about condition."
         }
         openGraph={{
-          title: "#COVID19India",
+          title: "Radiant Covid",
           locale: "en-IN",
           description: "We are here to help.",
         }}
@@ -26,7 +26,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       <RecoilRoot>
         <ApolloProvider client={client}>
-          <Component {...pageProps} />
+            <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover' />
+            <Component {...pageProps} />
         </ApolloProvider>
       </RecoilRoot>
     </>

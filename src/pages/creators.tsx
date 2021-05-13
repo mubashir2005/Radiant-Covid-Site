@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "react-bootstrap/Image";
+import Image from 'next/image'
 
 const Creators = () => {
   return (
@@ -9,8 +9,8 @@ const Creators = () => {
         <strong>Mohammed Mubashir Hasan</strong>
       </p>
       <Image
-        src="https://raw.githubusercontent.com/dingus45191/Radiant-Covid-Site/master/public/images/mubashir.jpeg"
-        height={200}
+        src="/images/mubashir.jpeg"
+        height={350}
         width={300}
         alt="Mubashir"
         className={"Creators__image"}
@@ -25,7 +25,7 @@ const Creators = () => {
         className={"Creators__image"}
         src="/madhav.png"
         alt="Madhav"
-        height={200}
+        height={350}
         width={300}
       />
       <p className={"Creators__something"}>I have fun with tech.</p>
