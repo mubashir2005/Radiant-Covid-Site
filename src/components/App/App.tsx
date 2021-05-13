@@ -51,7 +51,6 @@ function App() {
         <div className={"flex flex-row justify-center"} style={{ marginTop: 30 }}>
           <VisualPicker
               id="visual-picker-component-1"
-              // Tweets only show on multiple if i remove it they don't show
               multiple
               value={filters}
               onChange={handleMedicalResourcesChange}
