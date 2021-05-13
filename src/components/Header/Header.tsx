@@ -1,13 +1,12 @@
 import React from "react";
 import { IconButton, Input } from "@material-ui/core";
-import ClearIcon from "@material-ui/icons/Clear";
 import styled from "styled-components";
 import queryState from "../../atoms/query";
 import { COVID_19_INDIA } from "../../constants";
-import { Search } from "@material-ui/icons";
+import { Search, Clear as ClearIcon } from "@material-ui/icons";
 import filtersState from "../../atoms/filters";
 import { useRecoilState } from "recoil";
-import { Nav } from "react-bootstrap";
+import Link from "next/link";
 
 const CloseButton = styled(IconButton)`
   padding: 3px !important;
@@ -27,17 +26,9 @@ const SearchInput = styled(Input)`
   caret-color: #d9d9d9;
 `;
 
-const ResponsiveParagraph = styled.p`
-  @media only screen and (max-width: 620px) {
-    display: none;
-  }
-`;
-
 function Header() {
-  //@ts-ignore
-  const [query, setQuery] = useRecoilState(queryState);
-  //@ts-ignore
-  const [filters, setFilters] = useRecoilState(filtersState);
+  const [_query, setQuery] = useRecoilState(queryState);
+  const [_filters, setFilters] = useRecoilState(filtersState);
 
   const handleQueryChange = (query: string) => {
     setQuery(`${query}`);
@@ -62,42 +53,30 @@ function Header() {
           "m-auto w-3/5 md:w-4/6 flex justify-between items-center rounded-xl py-1 px-3 background-gray"
         }
       >
-        <Search className={"color-gray"} />
-        <ResponsiveParagraph
-          className={
-            "flex items-center mx-2 color-gray whitespace-wrap lg:whitespace-nowrap"
-          }
-        >
-          {/* {COVID_19_INDIA}{" "} */}
-          {/* {filters
-            .map((filter) => {
-              for (let resource of medicalResources)
-                if (resource.name === filter) return resource.displayName;
-            })
-            .join(" ")} */}
-        </ResponsiveParagraph>
+        <Search className={"color-gray"} style={{ margin: "0 5px" }} />
         <SearchInput
-          id={"search "}
           className={"flex-grow -mb-0.5"}
           disableUnderline
           placeholder={"Search"}
           onChange={(event) => handleQueryChange(event.target.value)}
         />
-        {
-          <CloseButton
-            className={"close"}
-            onClick={() => {
-              setQuery(COVID_19_INDIA);
-              //@ts-ignore
-              setFilters([])
-            }}
-          >
-            <ClearIcon className={"color-gray"} />
-          </CloseButton>
-        }
-      </div>
-      <Nav.Link href="/About" className={"text-white mr-auto"}>About</Nav.Link>
 
+        <CloseButton
+          className={"close"}
+          name={"clear"}
+          onClick={() => {
+            setQuery(COVID_19_INDIA);
+            setFilters([]);
+          }}
+        >
+          <ClearIcon className={"color-gray"} />
+        </CloseButton>
+      </div>
+      <Link href="/about">
+        <a className={"color-gray"} style={{ margin: "0 10px" }}>
+          About
+        </a>
+      </Link>
     </header>
   );
 }

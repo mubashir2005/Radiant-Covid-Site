@@ -8,6 +8,7 @@ interface Props {
 
 const tweetOptions = {
   theme: "dark",
+  conversation: "none",
 };
 
 function Tweet({ tweetId, onLoad }: Props) {

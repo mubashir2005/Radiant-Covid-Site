@@ -91,6 +91,7 @@ function LoadMore({ loading }: Props) {
         <LoadMoreButton
           className={"bg-blue-500 text-white py-1"}
           onClick={fetchMoreTweets}
+          name={"load more"}
         >
           Load More <DownIcon />
         </LoadMoreButton>

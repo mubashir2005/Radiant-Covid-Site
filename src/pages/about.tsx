@@ -1,13 +1,9 @@
 import React from "react";
-import {Nav} from "react-bootstrap";
+import Link from "next/link";
 
 function About() {
   return (
     <div className={"about"}>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-      />
       <h1 className={"about__header animate__animated animate__tada"}>
         About this site
       </h1>
@@ -30,11 +26,14 @@ function About() {
         </span>
       </p>
       <br />
-        <Nav.Link href={"/Creators"} className={"about__body__creators"}>Want to know who made this site?</Nav.Link>
-        <br/>
-        <Nav.Link href={"https://forms.gle/SUxQBWj76KYKhGYw7"} className={"about__body__feedback"}>Give us feedback</Nav.Link>
-
-
+      <Link href={"/creators"}>Want to know who made this site?</Link>
+      <br />
+      <a
+        href={"https://forms.gle/SUxQBWj76KYKhGYw7"}
+        className={"about__body__feedback"}
+      >
+        Give us feedback
+      </a>
     </div>
   );
 }
