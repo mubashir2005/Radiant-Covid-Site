@@ -11,6 +11,7 @@ const config = {
     dest: 'public',
     disable: false,
     register: true,
+    target: "serverless"
   }
 }
 
