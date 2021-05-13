@@ -11,8 +11,8 @@ const config = {
     dest: 'public',
     disable: false,
     register: true,
-    target: "serverless"
-  }
+  },
+  target: "serverless"
 }
 
 module.exports = withPwa(config)
