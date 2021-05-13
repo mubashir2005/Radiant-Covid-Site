@@ -3,6 +3,7 @@ import { VisualPickerOption } from "react-rainbow-components";
 import styled from "styled-components";
 import Image from "next/image";
 
+
 const DarkVisualPicker = styled(VisualPickerOption)`
   margin: 0 10px;
 
