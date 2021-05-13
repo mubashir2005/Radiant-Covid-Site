@@ -3,7 +3,7 @@ const { createSecureHeaders } = require("next-secure-headers");
 
 const withPwa = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
-const withOffline = require('next-offline')
+
 
 
 const config = {
@@ -21,5 +21,6 @@ const config = {
   target: "serverless"
 }
 
-module.exports = withOffline(withPwa(config))
+module.exports = withPwa(config)
+
 
