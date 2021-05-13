@@ -68,6 +68,7 @@ export default class MyDocument extends Document {
                   <meta property='og:site_name' content='Radiant Covid' />
                   <meta property='og:url' content='https://radiant-covid.vercel.app/' />
                   <meta property='og:image' content='https://raw.githubusercontent.com/dingus45191/Radiant-Covid-Site/master/public/icons/logo-medium.png' />
+                  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/dingus45191/Radiant-Covid-Site/master/public/icons/logo-medium.png"/>
         </Head>
         <body>
           <Main />

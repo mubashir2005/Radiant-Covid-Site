@@ -21,6 +21,7 @@
     "graphql-type-json": "^0.3.2",
     "lodash": "^4.17.21",
     "next": "latest",
+    "next-offline": "^5.0.5",
     "next-pwa": "^5.2.21",
     "next-seo": "^4.24.0",
     "react": "^17.0.2",
