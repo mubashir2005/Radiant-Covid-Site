@@ -56,8 +56,6 @@ export default class MyDocument extends Document {
                   <link rel='mask-icon' href='/static/icons/safari-pinned-tab.svg' color='#5bbad5' />
                   <link rel='shortcut icon' href='/favicon.ico' />
                   <link rel="preconnect" href="https://fonts.gstatic.com" />
-                  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-                  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 
                   <meta name='twitter:card' content='summary' />
                   <meta name='twitter:url' content='https://radiant-covid.vercel.app' />
