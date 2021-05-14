@@ -17,8 +17,7 @@ const config = {
     disable: false,
     register: true,
     runtimeCaching
-  },
-  target: "serverless"
+  }
 }
 
 module.exports = withPwa(config)
