@@ -6,7 +6,10 @@ import { useRouter } from "next/router";
 import { GetTweet } from "../server/typeDefs/typescript-types";
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
-import originalTweetsState from "../atoms/originalTweets";
+import queryState from "../atoms/query";
+import filtersState from "../atoms/filters";
+import tweetsState from "../atoms/tweets";
+import useSearchTweets from "../hooks/useSearchTweets";
 
 interface Props {
   tweets: GetTweet[];
@@ -14,14 +17,24 @@ interface Props {
 
 export default function Home({ tweets }: Props) {
   const { isFallback } = useRouter();
-  const [_originalTweets, setOriginalTweets] = useRecoilState(
-    originalTweetsState
-  );
+  const [query] = useRecoilState(queryState);
+  const [filters] = useRecoilState(filtersState);
+  const [_tweets, setTweets] = useRecoilState(tweetsState);
+
+  const { searchTweets } = useSearchTweets(query);
 
   useEffect(() => {
-    setOriginalTweets(tweets);
-    console.log("original ones tweets", tweets);
-  }, [tweets]);
+    if (query === COVID_19_INDIA && !filters.length && tweets.length) {
+      setTweets({
+        tweets: tweets,
+        loading: false,
+        error: null,
+      });
+      return;
+    }
+
+    searchTweets();
+  }, [query, filters, tweets]);
 
   if (isFallback) return <></>;
 
