@@ -1,6 +1,5 @@
 import Header from "../components/Header/Header";
 import App from "../components/App/App";
-import { COVID_19_INDIA } from "../constants";
 import { GetTweet } from "../server/typeDefs/typescript-types";
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
