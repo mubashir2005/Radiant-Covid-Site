@@ -1,6 +1,5 @@
 const { createSecureHeaders } = require("next-secure-headers");
-const withPwa = require("next-pwa");
-const runtimeCaching = require("next-pwa/cache");
+const withPwa = require("next-offline");
 
 const config = {
   async headers() {
@@ -11,9 +10,7 @@ const config = {
   },
   pwa: {
     dest: "public",
-    runtimeCaching,
-    disable: process.env.NODE_ENV === "development",
   },
 };
 
-module.exports = config;
+module.exports = withPwa(config);
