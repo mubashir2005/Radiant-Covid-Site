@@ -16,5 +16,4 @@ const config = {
     runtimeCaching,
   },
 };
-
 module.exports = withPwa(config);
