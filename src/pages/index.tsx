@@ -15,7 +15,6 @@ interface Props {
 export default function Home({ tweets }: Props) {
   const [query] = useRecoilState(queryState);
   const [filters] = useRecoilState(filtersState);
-  const [_tweets, setTweets] = useRecoilState(tweetsState);
   const { searchTweets } = useSearchTweets(query);
 
   useEffect(() => {
