@@ -11,6 +11,7 @@ import useSearchTweets from "../hooks/useSearchTweets";
 export default function Home(){
   const [query] = useRecoilState(queryState);
   const [filters] = useRecoilState(filtersState);
+// @ts-ignore
   const [_tweets, setTweets] = useRecoilState(tweetsState);
   const { searchTweets } = useSearchTweets(query);
 
