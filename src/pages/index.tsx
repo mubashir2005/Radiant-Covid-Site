@@ -12,7 +12,7 @@ interface Props {
   tweets: GetTweet[];
 }
 
-export default function Home({ tweets }: Props) {
+export default function Home() {
   const [query] = useRecoilState(queryState);
   const [filters] = useRecoilState(filtersState);
   const { searchTweets } = useSearchTweets(query);
