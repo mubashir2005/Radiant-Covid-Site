@@ -16,7 +16,7 @@ export default function Home(){
 
   useEffect(() => {
     searchTweets();
-  }, [query, filters, tweets]);
+  }, [query, filters, _tweets]);
 
 
   return (
