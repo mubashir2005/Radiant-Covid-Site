@@ -1,3 +1,0 @@
-nextApp:
-  component: serverless-next.js
-  bucketName: radiant-covid,

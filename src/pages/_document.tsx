@@ -38,8 +38,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang={"en-IN"}>
         <Head>
-          <title>Radiant covid</title>
-
           <meta name="application-name" content="PWA App" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
