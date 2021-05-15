@@ -39,6 +39,10 @@ function App() {
   }, [query, filters, originalTweets]);
 
   useEffect(() => {
+    console.log("Tweets", tweets);
+  }, [tweets]);
+
+  useEffect(() => {
     if (tweets.loading) setLoading(true);
   }, [tweets.loading, loading]);
 
@@ -47,34 +51,34 @@ function App() {
   };
 
   return (
-      <div className={"flex justify-center flex-col pb-4"}>
-        <div className={"flex flex-row justify-center"} style={{ marginTop: 30 }}>
-          <VisualPicker
-              id="visual-picker-component-1"
-              multiple
-              value={filters}
-              onChange={handleMedicalResourcesChange}
-          >
-            {medicalResources.map((resource, index) => (
-                <ResourceOption
-                    key={index}
-                    name={resource.name}
-                    imageUrl={resource.imageUrl}
-                />
-            ))}
-          </VisualPicker>
-        </div>
-        {loading && <Spinner />}
-        {tweets.tweets.map((tweet) => (
-            <Tweet
-                tweetId={tweet.id}
-                key={tweet.id}
-                onLoad={() => setLoading(false)}
+    <div className={"flex justify-center flex-col pb-4"}>
+      <div className={"flex flex-row justify-center"} style={{ marginTop: 30 }}>
+        <VisualPicker
+          id="visual-picker-component-1"
+          multiple
+          value={filters}
+          onChange={handleMedicalResourcesChange}
+        >
+          {medicalResources.map((resource, index) => (
+            <ResourceOption
+              key={index}
+              name={resource.name}
+              imageUrl={resource.imageUrl}
             />
-        ))}
-
-        <LoadMore loading={loading} />
+          ))}
+        </VisualPicker>
       </div>
+      {loading && <Spinner />}
+      {tweets.tweets.map((tweet) => (
+        <Tweet
+          tweetId={tweet.id}
+          key={tweet.id}
+          onLoad={() => setLoading(false)}
+        />
+      ))}
+
+      <LoadMore loading={loading} />
+    </div>
   );
 }
 
