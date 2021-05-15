@@ -82,7 +82,7 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.ico" />
 
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:url" content="https://radiant-covid.vercel.app" />
+          <meta name="twitter:url" content="https://www.radiantcovid.in />
           <meta name="twitter:title" content="Radiant covid" />
           <meta
             name="twitter:description"
@@ -90,7 +90,7 @@ export default class MyDocument extends Document {
           />
           <meta
             name="twitter:image"
-            content="https://radiant-covid.vercel.app/images/icons/android-chrome-192x192.png"
+            content="https://radiant-covid.vercel.app/images/icons/apple-touch-icon.png"
           />
           <meta name="twitter:creator" content="@rispatna" />
           <meta property="og:type" content="website" />
@@ -100,7 +100,7 @@ export default class MyDocument extends Document {
             content="An app to help covid patients find relevant info"
           />
           <meta property="og:site_name" content="Covid app" />
-          <meta property="og:url" content="https://radiant-covid.vercel.app" />
+          <meta property="og:url" content="https://www.radiantcovid.in" />
           <meta
             property="og:image"
             content="https://radiant-covid.vercel.app/images/icons/apple-touch-icon.png"
