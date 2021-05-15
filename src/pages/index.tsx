@@ -49,7 +49,7 @@ export default function Home({ tweets }: Props) {
 }
 
 export async function getStaticProps() {
-  const revalidationTime: number = 60 * 60; // 1 hour in seconds
+  const revalidationTime: number = 60; // 1 hour in seconds
 
   try {
     const tweets = await resolvers.Query.tweets(undefined, {
