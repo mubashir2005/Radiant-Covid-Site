@@ -16,4 +16,4 @@ const config = {
   },
 };
 
-module.exports = withPwa(config);
+module.exports = config;
