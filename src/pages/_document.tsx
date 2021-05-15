@@ -83,7 +83,6 @@ export default class MyDocument extends Document {
 
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:url" content="https://www.radiantcovid.in />
-          <meta name="twitter:title" content="Radiant covid" />
           <meta
             name="twitter:description"
             content="An app to help covid patients find relevant info"
