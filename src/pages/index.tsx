@@ -20,15 +20,11 @@ export default function Home({ tweets }: Props) {
   const { searchTweets } = useSearchTweets(query);
 
   useEffect(() => {
-    if (query === COVID_19_INDIA && !filters.length && tweets.length) {
       setTweets({
         tweets: tweets,
         loading: false,
         error: null,
       });
-      return;
-    }
-
     searchTweets();
   }, [query, filters, tweets]);
 
