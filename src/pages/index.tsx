@@ -19,11 +19,6 @@ export default function Home({ tweets }: Props) {
   const { searchTweets } = useSearchTweets(query);
 
   useEffect(() => {
-      setTweets({
-        tweets: tweets,
-        loading: false,
-        error: null,
-      });
     searchTweets();
   }, [query, filters, tweets]);
 
