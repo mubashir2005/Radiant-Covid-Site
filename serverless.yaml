@@ -1,2 +1,3 @@
 nextApp:
-  component: "@sls-next/serverless-component@1.18.0"
+  component: serverless-next.js
+  bucketName: radiant-covid,
