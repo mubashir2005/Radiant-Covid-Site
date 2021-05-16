@@ -37,7 +37,7 @@ function About() {
       </a>
         <br/>
         <br/>
-        <p><a href="https://www.radiantcovid.in/">Back to Home page</a></p>
+        <p><a href="https://www.radiantcovid.in/"><strong>Back to Home page</strong></a></p>
     </div>
   );
 }

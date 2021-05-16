@@ -23,7 +23,7 @@ const Creators = () => {
       </p>
       <Image
         className={"Creators__image"}
-        src="/madhav.png"
+        src="https://media.discordapp.net/attachments/716852614179848193/843463071095455784/biden.jpeg"
         alt="Madhav"
         height={350}
         width={300}
@@ -36,7 +36,7 @@ const Creators = () => {
         </a>
           <br/>
           <br/>
-          <p><a href="https://www.radiantcovid.in/">Back to Home page</a></p>
+          <p><a href="https://www.radiantcovid.in/"><strong>Back to Home page</strong></a></p>
       </p>
     </div>
   );
