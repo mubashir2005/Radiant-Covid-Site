@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import { RecoilRoot } from "recoil";
-import "../../styles/globals.scss";
+import  "../../styles/globals.scss";
 import { ApolloProvider } from "@apollo/client";
 import client from "../apollo-client/client";
 import { DefaultSeo } from "next-seo";
