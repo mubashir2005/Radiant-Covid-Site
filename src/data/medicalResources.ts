@@ -24,6 +24,11 @@ const medicalResources: MedicalResource[] = [
     imageUrl: "/images/ICU.webp",
     displayName: "#ICU",
   },
+  {
+    name: "#covidhospital #Patna",
+    imageUrl: "/images/hospital.jpg",
+    displayName: "#ICU",
+  },
 ];
 
 interface MedicalResource {
