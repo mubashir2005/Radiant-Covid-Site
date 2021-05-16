@@ -15,11 +15,6 @@ const medicalResources: MedicalResource[] = [
     displayName: "#ambulance",
   },
   {
-    name: "#Plasma #Patna ",
-    imageUrl: "/images/plasma.jpg",
-    displayName: "#plasma",
-  },
-  {
     name: "#Remedesivir #Patna",
     imageUrl: "/images/remedesivir.jpg",
     displayName: "#Remedesivir",
@@ -28,11 +23,6 @@ const medicalResources: MedicalResource[] = [
     name: "#Patna #ICUbeds #BedsAvailable",
     imageUrl: "/images/ICU.webp",
     displayName: "#ICU",
-  },
-  {
-    name: "#fabiflu #Patna",
-    imageUrl: "/images/fabiflu.jpeg",
-    displayName: "#fabiflu",
   },
 ];
 
