@@ -38,14 +38,14 @@ export default class MyDocument extends Document {
         return (
             <Html lang={"en-IN"}>
                 <Head>
-                    <meta name="application-name" content="PWA App" />
+                    <meta name="application-name" content="Radiant Covid" />
                     <meta name="apple-mobile-web-app-capable" content="yes" />
                     <meta
                         name="apple-mobile-web-app-status-bar-style"
                         content="default"
                     />
-                    <meta name="apple-mobile-web-app-title" content="PWA App" />
-                    <meta name="description" content="Best PWA App in the world" />
+                    <meta name="apple-mobile-web-app-title" content="Radiant Covid" />
+                    <meta name="description" content="Helping India fight covid 19" />
                     <meta name="format-detection" content="telephone=no" />
                     <meta name="mobile-web-app-capable" content="yes" />
                     <meta
@@ -82,7 +82,7 @@ export default class MyDocument extends Document {
                     <link rel="shortcut icon" href="/favicon.ico" />
 
                     <meta name="twitter:card" content="summary" />
-                    <meta name="twitter:url" content="https://radiant-covid.vercel.app" />
+                    <meta name="twitter:url" content="https://radiantcovid.in" />
                     <meta name="twitter:title" content="Radiant covid" />
                     <meta
                         name="twitter:description"
@@ -94,13 +94,13 @@ export default class MyDocument extends Document {
                     />
                     <meta name="twitter:creator" content="@rispatna" />
                     <meta property="og:type" content="website" />
-                    <meta property="og:title" content="Covid app" />
+                    <meta property="og:title" content="Radiant Covid" />
                     <meta
                         property="og:description"
                         content="An app to help covid patients find relevant info"
                     />
-                    <meta property="og:site_name" content="Covid app" />
-                    <meta property="og:url" content="https://radiant-covid.vercel.app" />
+                    <meta property="og:site_name" content="Radiant's covid site" />
+                    <meta property="og:url" content="https://radiantcovid.in" />
                     <meta
                         property="og:image"
                         content="https://radiant-covid.vercel.app/images/icons/apple-touch-icon.png"
