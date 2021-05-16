@@ -90,7 +90,7 @@ export default class MyDocument extends Document {
           />
           <meta
             name="twitter:image"
-            content="https://radiant-covid.vercel.app/images/icons/android-chrome-192x192.png"
+            content="https://github.com/dingus45191/Radiant-Covid-Site/blob/master/public/images/icons/icon-512x512.png"
           />
           <meta name="twitter:creator" content="@rispatna" />
           <meta property="og:type" content="website" />
@@ -103,7 +103,7 @@ export default class MyDocument extends Document {
           <meta property="og:url" content="https://radiantcovid.in" />
           <meta
             property="og:image"
-            content="https://radiant-covid.vercel.app/images/icons/apple-touch-icon.png"
+            content="https://github.com/dingus45191/Radiant-Covid-Site/blob/master/public/images/icons/icon-512x512.png"
           />
         </Head>
         <body>
