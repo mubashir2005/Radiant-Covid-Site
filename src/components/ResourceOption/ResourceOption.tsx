@@ -6,7 +6,7 @@ import Image from "next/image";
 const DarkVisualPicker = styled(VisualPickerOption)`
   margin: 0 10px;
   span[data-id="visual-picker_option"] {
-    background: transparent !important;
+    background: white !important;
   }
   span,
   svg {
@@ -18,21 +18,21 @@ const DarkVisualPicker = styled(VisualPickerOption)`
 `;
 
 interface Props {
-    name: string;
-    imageUrl: string;
+  name: string;
+  imageUrl: string;
 }
 
 function ResourceOption({ imageUrl, name }: Props) {
-    return (
-        <DarkVisualPicker name={name}>
-            <Image
-                src={imageUrl}
-                alt={name}
-                layout={"fill"}
-                className={"display-image"}
-            />
-        </DarkVisualPicker>
-    );
+  return (
+    <DarkVisualPicker name={name}>
+      <Image
+        src={imageUrl}
+        alt={name}
+        layout={"fill"}
+        className={"display-image"}
+      />
+    </DarkVisualPicker>
+  );
 }
 
 export default ResourceOption;
