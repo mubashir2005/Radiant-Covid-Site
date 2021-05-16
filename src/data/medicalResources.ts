@@ -27,7 +27,7 @@ const medicalResources: MedicalResource[] = [
   {
     name: "#covidhospital #Patna",
     imageUrl: "/images/hospital.jpg",
-    displayName: "#ICU",
+    displayName: "#Hospital",
   },
 ];
 
