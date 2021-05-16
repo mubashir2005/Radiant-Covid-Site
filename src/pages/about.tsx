@@ -28,12 +28,18 @@ function About() {
       <br />
       <Link href={"/creators"}>Want to know who made this site?</Link>
       <br />
+        <br/>
       <a
         href={"https://forms.gle/SUxQBWj76KYKhGYw7"}
         className={"about__body__feedback"}
       >
         Give us feedback
       </a>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <p><a href="https://www.radiantcovid.in/">Back to Home page</a></p>
     </div>
   );
 }
