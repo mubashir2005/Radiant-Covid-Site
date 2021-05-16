@@ -5,7 +5,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "mocha './src/tests/*.spec.js'"
+    "test": "jest"
   },
   "dependencies": {
     "@apollo/client": "^3.3.16",
@@ -16,12 +16,16 @@
     "babel-core": "^6.26.3",
     "bufferutil": "^4.0.3",
     "coffeescript": "^2.5.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "expect": "^26.6.2",
     "framer-motion": "^4.1.11",
     "graphql": "^15.5.0",
     "graphql-middleware": "^6.0.10",
     "graphql-rate-limit": "^3.0.0",
     "graphql-type-json": "^0.3.2",
+    "jest": "^26.6.3",
+    "jest-canvas-mock": "^2.3.1",
     "lodash": "^4.17.21",
     "mocha": "^8.4.0",
     "next": "latest",

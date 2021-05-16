@@ -5,18 +5,16 @@ import { useRecoilState } from "recoil";
 import queryState from "../atoms/query";
 import filtersState from "../atoms/filters";
 import useSearchTweets from "../hooks/useSearchTweets";
-import tweetsState from "../atoms/tweets";
+
 
 
 export default function Home(){
   const [query] = useRecoilState(queryState);
   const [filters] = useRecoilState(filtersState);
   const { searchTweets } = useSearchTweets(query);
-  // @ts-ignore
-    const [tweets, setTweets] = useRecoilState(tweetsState);
   useEffect(() => {
     searchTweets();
-  }, [query, filters,tweets]);
+  }, [query, filters]);
 
 
   return (
