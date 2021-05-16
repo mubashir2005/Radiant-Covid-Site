@@ -34,11 +34,6 @@ const medicalResources: MedicalResource[] = [
     imageUrl: "/images/fabiflu.jpeg",
     displayName: "#fabiflu",
   },
-  {
-    name: "#Oximeter #Patna ",
-    imageUrl: "/images/oximeter.jpg",
-    displayName: "#Oximeter",
-  },
 ];
 
 interface MedicalResource {
