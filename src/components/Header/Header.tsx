@@ -63,7 +63,7 @@ function Header() {
 
         <CloseButton
           className={"close"}
-          name={"clear"}
+          aria-label={"clear"}
           onClick={() => {
             setQuery(COVID_19_INDIA);
             setFilters([]);
