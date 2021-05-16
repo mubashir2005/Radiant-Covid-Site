@@ -12,7 +12,6 @@ const resolvers = {
     hi: () => "Hello world.",
     tweets: async (_req: any, { input }: { input: TweetsInput }) => {
       const { query, lastTweet } = input;
-      console.log(query);
 
       interface Response {
         data: {

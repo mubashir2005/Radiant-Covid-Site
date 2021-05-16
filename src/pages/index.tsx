@@ -6,9 +6,6 @@ import queryState from "../atoms/query";
 import filtersState from "../atoms/filters";
 import useSearchTweets from "../hooks/useSearchTweets";
 
-
-
-
 export default function Home() {
   const [query] = useRecoilState(queryState);
   const [filters] = useRecoilState(filtersState);
@@ -27,4 +24,3 @@ export default function Home() {
     </>
   );
 }
-

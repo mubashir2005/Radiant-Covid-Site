@@ -1,1 +1,1 @@
-export const COVID_19_INDIA = "#covid19India";
+export const COVID_19_INDIA = "#Covid19India #Covid19IndiaHelp";
