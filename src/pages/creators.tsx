@@ -34,6 +34,8 @@ const Creators = () => {
         <a href="https://shortnner.tech/Sic9ag-Nn">
           <strong>repo</strong>
         </a>
+          <br/>
+          <p><a href="https://www.radiantcovid.in/">Back to Home page</a></p>
       </p>
     </div>
   );
