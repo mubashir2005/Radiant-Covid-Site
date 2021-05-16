@@ -42,10 +42,10 @@ function Header() {
     >
       <p
         className={
-          "text-2xl md:text-3xl lg:text-4xl font-bold justify-self-start color-gray"
+          "pl-1 text-xl md:text-3xl lg:text-4xl font-bold justify-self-start color-gray"
         }
       >
-        Radiant Covid
+        RIS Covid
       </p>
 
       <div
@@ -55,7 +55,7 @@ function Header() {
       >
         <Search className={"color-gray"} style={{ margin: "0 5px" }} />
         <SearchInput
-          className={"flex-grow -mb-0.5"}
+          className={"flex-grow -mb-0.5 pr-8"}
           disableUnderline
           placeholder={"Search"}
           onChange={(event) => handleQueryChange(event.target.value)}
@@ -63,7 +63,7 @@ function Header() {
 
         <CloseButton
           className={"close"}
-          name={"clear"}
+          aria-label={"clear"}
           onClick={() => {
             setQuery(COVID_19_INDIA);
             setFilters([]);
@@ -73,7 +73,7 @@ function Header() {
         </CloseButton>
       </div>
       <Link href="/about">
-        <a className={"color-gray"} style={{ margin: "0 10px" }}>
+        <a className={"color-gray"} style={{ margin: "0 5px" }}>
           About
         </a>
       </Link>
