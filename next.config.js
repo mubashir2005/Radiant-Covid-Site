@@ -13,7 +13,6 @@ const config = {
     disable: process.env.NODE_ENV === "development",
     dest: "public",
     register: true,
-    runtimeCaching,
   },
 };
 module.exports = withPwa(config);

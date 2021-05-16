@@ -8,7 +8,9 @@
     "test": "jest"
   },
   "jest": {
-    "setupFiles": ["jest-canvas-mock"]
+    "setupFiles": [
+      "jest-canvas-mock"
+    ]
   },
   "dependencies": {
     "@apollo/client": "^3.3.16",
@@ -43,6 +45,7 @@
     "react-loading-skeleton": "^2.2.0",
     "react-lottie": "^1.2.3",
     "react-rainbow-components": "^1.25.0",
+    "react-twitter-embed": "^3.0.3",
     "react-twitter-widgets": "^1.10.0",
     "recoil": "^0.2.0",
     "styled-components": "^5.2.3",

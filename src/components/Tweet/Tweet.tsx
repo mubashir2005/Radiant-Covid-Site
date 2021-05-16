@@ -1,5 +1,5 @@
 import React from "react";
-import { Tweet as TweetWidget } from "react-twitter-widgets";
+import {TwitterTweetEmbed } from 'react-twitter-embed';
 
 interface Props {
   tweetId: string;
@@ -8,15 +8,14 @@ interface Props {
 
 const tweetOptions = {
   theme: "dark",
-  conversation: "none",
-  card:"hidden"
+  conversation: "none"
 };
 
 function Tweet({ tweetId, onLoad }: Props) {
   return (
     <>
       <div>
-        <TweetWidget
+        <TwitterTweetEmbed
           tweetId={tweetId}
           onLoad={() => {
             onLoad();

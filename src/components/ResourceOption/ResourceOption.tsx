@@ -22,7 +22,7 @@ interface Props {
   imageUrl: string;
 }
 
-function ResourceOption({ imageUrl, name }: Props) {
+function ResourceOption({ imageUrl, name}: Props) {
   return (
     <DarkVisualPicker name={name}>
       <Image

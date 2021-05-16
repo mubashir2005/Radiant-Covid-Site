@@ -8,28 +8,32 @@ import filtersState from "../../atoms/filters";
 import medicalResources from "../../data/medicalResources";
 import { useRecoilState } from "recoil";
 import Tweet from "../Tweet/Tweet";
+import queryState from "../../atoms/query";
+
 
 function App() {
   const [tweets] = useRecoilState(tweetsState);
   const [loading, setLoading] = useState<boolean>(true);
-  const [filters, setFilters] = useRecoilState(filtersState);
+  const [filters] = useRecoilState(filtersState);
+  const [_query, setQuery] = useRecoilState(queryState);
 
   useEffect(() => {
     if (tweets.loading) setLoading(true);
   }, [tweets.loading, loading]);
 
   const handleMedicalResourcesChange = (filter: any) => {
-    setFilters(filter);
+    setQuery(filter);
   };
+
 
   return (
     <div className={"flex justify-center flex-col pb-4"}>
       <div className={"flex flex-row justify-center"} style={{ marginTop: 30 }}>
         <VisualPicker
           id="visual-picker-component-1"
-          multiple
           value={filters}
           onChange={handleMedicalResourcesChange}
+
         >
           {medicalResources.map((resource, index) => (
             <ResourceOption
@@ -40,15 +44,15 @@ function App() {
           ))}
         </VisualPicker>
       </div>
-      {loading && <Spinner />}
-      {tweets.tweets.map((tweet) => (
-        <Tweet
-          tweetId={tweet.id}
-          key={tweet.id}
-          onLoad={() => setLoading(false)}
-        />
-      ))}
+      {loading && <Spinner/>}
+      {tweets.tweets.map((tweet:any) => (
 
+            <Tweet
+                tweetId={tweet.id}
+                key={tweet.id}
+                onLoad={()=> setLoading(false)}
+            />
+        ))}
       <LoadMore loading={loading} />
     </div>
   );

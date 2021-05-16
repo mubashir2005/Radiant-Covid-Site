@@ -32,7 +32,7 @@ const useSearchTweets = (
         getTweets({
           variables: {
             tweet: {
-              query: `${query} ${filters.join(" ")}`,
+              query: `${query} ${filters}`,
               lastTweet: lastTweet ? lastTweetId : undefined,
             },
           },
