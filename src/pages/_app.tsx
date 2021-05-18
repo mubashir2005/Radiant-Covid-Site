@@ -4,9 +4,12 @@ import  "../../styles/globals.scss";
 import { ApolloProvider } from "@apollo/client";
 import client from "../apollo-client/client";
 import { DefaultSeo } from "next-seo";
+import React from "react";
+
+// @ts-nocheck
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
+    return (
     <>
       <DefaultSeo
         title={"Radiant covid"}

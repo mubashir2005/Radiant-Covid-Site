@@ -16,6 +16,7 @@
     "@apollo/client": "^3.3.16",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "@types/google.analytics": "^0.0.41",
     "animate.css": "^4.1.1",
     "apollo-server-micro": "^2.24.0",
     "babel-core": "^6.26.3",

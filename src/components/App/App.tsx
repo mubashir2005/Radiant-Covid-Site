@@ -10,6 +10,7 @@ import { useRecoilState } from "recoil";
 import Tweet from "../Tweet/Tweet";
 import queryState from "../../atoms/query";
 
+// ts-nocheck
 
 function App() {
   const [tweets] = useRecoilState(tweetsState);
@@ -26,6 +27,7 @@ function App() {
   };
 
 
+  // @ts-ignore
   return (
     <div className={"flex justify-center flex-col pb-4"}>
       <div className={"flex flex-row justify-center"} style={{ marginTop: 30 }}>
