@@ -7,7 +7,7 @@ const tweetsState = atom<TweetsState>({
   key: "medical resources",
   default: {
     tweets: initialTweets,
-    loading: false,
+    loading: true,
     error: null,
   },
 });

@@ -1,6 +1,6 @@
 const medicalResources: MedicalResource[] = [
   {
-    name: "#Oxygen #Patna #OxygenCylinder #Verified",
+    name: "#Oxygen #Patna",
     imageUrl: "/images/oxygen.jpg",
     displayName: "#Oxygen",
   },
@@ -20,7 +20,7 @@ const medicalResources: MedicalResource[] = [
     displayName: "#Remedesivir",
   },
   {
-    name: "#Patna #ICUbeds #BedsAvailable",
+    name: "#Patna #ICUbed",
     imageUrl: "/images/ICU.webp",
     displayName: "#ICU",
   },
