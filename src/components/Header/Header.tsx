@@ -7,6 +7,9 @@ import { Search, Clear as ClearIcon } from "@material-ui/icons";
 import filtersState from "../../atoms/filters";
 import { useRecoilState } from "recoil";
 import Link from "next/link";
+// @ts-ignore
+import { stack as Menu } from 'react-burger-menu'
+
 
 const CloseButton = styled(IconButton)`
   padding: 3px !important;
@@ -30,6 +33,51 @@ function Header() {
   const [_query, setQuery] = useRecoilState(queryState);
   const [_filters, setFilters] = useRecoilState(filtersState);
 
+  const styles = {
+      bmBurgerButton: {
+      position: 'fixed',
+      width: '36px',
+      height: '30px',
+      right: '36px',
+      top: '25px'
+     },
+    bmBurgerBars: {
+      background: '#373a47'
+    },
+    bmBurgerBarsHover: {
+      background: '#a90000'
+    },
+    bmCrossButton: {
+      height: '24px',
+      width: '24px'
+    },
+    bmCross: {
+      background: '#bdc3c7'
+    },
+    bmMenuWrap: {
+      position: 'fixed',
+      height: '200%'
+    },
+    bmMenu: {
+      background: '#373a47',
+      padding: '2.5em 1.5em 0',
+      fontSize: '1.15em',
+    },
+    bmMorphShape: {
+      fill: '#373a47'
+    },
+    bmItemList: {
+      color: '#d9d9d9',
+      padding: '1em'
+    },
+    bmItem: {
+      display: 'inline-block'
+    },
+    bmOverlay: {
+      background: 'rgba(0, 0, 0, 0.3)'
+    }
+  }
+
   const handleQueryChange = (query: string) => {
     setQuery(`${query}`);
   };
@@ -39,6 +87,7 @@ function Header() {
       className={
         "py-4 px-1 md:px-8 flex flex-row items-center border border-1 border-gray"
       }
+      id="outer-container"
     >
       <p
         className={
@@ -72,11 +121,18 @@ function Header() {
           <ClearIcon className={"color-gray"} />
         </CloseButton>
       </div>
-      <Link href="/about">
-        <a className={"color-gray"} style={{ margin: "0 5px" }}>
-          About
-        </a>
-      </Link>
+
+      <Menu right className={'color-gray'} outerContainerId={ "outer-container" } styles={styles}  isOpen={ false } disableCloseOnEsc  width={ 400 } height={1000}>
+        <a id="home" className="menu-item" href="/">Home</a><br/>
+        <Link href="/about">
+          <a className={"color-gray"} style={{ margin: "0 5px" }}>
+            About
+          </a>
+        </Link><br/>
+        <a id="contact" className="menu-item" href="/contact">Contact</a><br/>
+        <a className="menu-item--small" href="">Settings</a>
+      </Menu>
+
     </header>
   );
 }
