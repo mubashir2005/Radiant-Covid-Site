@@ -22,60 +22,82 @@
   body {
     background-color: #000;
   }
+
   .about {
     background-color: #fde8e9;
     color: #0D1F22;
     padding: 400px;
   }
+
   .about__header {
     font-size: 40px;
     margin-bottom: 20px;
-    font-family: "Monserrat",sans-serif;
+    font-family: "Monserrat", sans-serif;
   }
+
   .about__subtitle {
     font-size: 20px;
   }
+
   .about__body {
     margin-top: 20px;
     font-size: 22px;
     line-height: 1.5;
   }
-  .about__body__creators{
+
+  .about__body__creators {
     margin-top: 10px;
     font-size: 20px;
   }
-  .about__body__feedback{
-    margin-top: 30px;
-  }
+
   .Creators {
     background-color: #0D1F22;
     color: #caf0f8;
     padding: 400px;
   }
+
   .Creators__header {
     font-size: 50px;
     margin-bottom: 20px;
   }
+
   .Creators__tech__lead {
     font-size: 30px;
     font-weight: bold;
   }
+
   .Creators__other__tech__guy {
     font-size: 30px;
     margin-top: 20px;
     font-weight: bold;
   }
-  .Creators__dev{
+
+  .Creators__dev {
     margin-top: 50px;
   }
-  .Creators__something{
+
+  .Creators__something {
     margin-top: 30px;
   }
-  .Creators__image{
+
+  .Creators__image {
     margin-top: 20px;
     margin-left: 40px;
     margin-bottom: 20px;
   }
+
+  .more {
+    background-color: #D4CB92;
+    color: #0D1F22;
+    padding: 400px;
+  }
+
+  .more__header {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: "Monserrat", sans-serif;
+  }
+
   @media only screen and (max-width: 600px) {
     .about {
       padding: 50px;
@@ -85,67 +107,53 @@
       padding: 50px;
       padding-bottom: 150px;
     }
-    .Creators__image{
-      margin:auto;
+    .Creators__image {
+      margin: auto;
       margin-top: 20px;
       margin-bottom: 20px;
     }
-    /* Position and sizing of burger button */
-    .bm-burger-button {
-      position: fixed;
-      width: 36px;
-      height: 30px;
-      left: 36px;
-      top: 36px;
+    .more {
+      padding: 50px;
+      padding-bottom: 150px;
+    }
+    .more__header{
+      margin-bottom: 60px;
     }
 
-    /* Color/shape of burger icon bars */
-    .bm-burger-bars {
-      background: #373a47;
-    }
-
-    /* Color/shape of burger icon bars on hover*/
-    .bm-burger-bars-hover {
-      background: #a90000;
-    }
-
-    /* Position and sizing of clickable cross button */
-    .bm-cross-button {
-      height: 24px;
-      width: 24px;
-    }
-
-    /* Color/shape of close button cross */
-    .bm-cross {
-      background: #bdc3c7;
-    }
   }
   @media only screen and (min-width: 768px) and(max-width: 1024px) {
     .about {
       padding: 250px;
       padding-bottom: 600px;
     }
-    .Creators{
+    .Creators {
       padding: 250px;
     }
+    .more {
+      padding: 250px;
+      padding-bottom: 600px;
+    }
+  }
+
+  @layer utilities {
+    .color-gray {
+      color: #d9d9d9;
+    }
+
+    .background-gray {
+      background-color: #202327;
+    }
+
+    .border-gray {
+      border: none;
+      border-bottom: 1px solid #202327;
+    }
+
+
   }
 }
-
-@layer utilities {
-  .color-gray {
-    color: #d9d9d9;
-  }
-
-  .background-gray {
-    background-color: #202327;
-  }
-
-  .border-gray {
-    border: none;
-    border-bottom: 1px solid #202327;
-  }
-}
-
 .twitter-tweet {
   margin: 30px auto 10px !important;
 }
+
+

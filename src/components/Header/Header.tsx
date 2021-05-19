@@ -59,7 +59,7 @@ function Header() {
       height: '200%'
     },
     bmMenu: {
-      background: '#373a47',
+      background: '#0d1f22',
       padding: '2.5em 1.5em 0',
       fontSize: '1.15em',
     },
@@ -123,14 +123,19 @@ function Header() {
       </div>
 
       <Menu right className={'color-gray'} outerContainerId={ "outer-container" } styles={styles}  isOpen={ false } disableCloseOnEsc  width={ 400 } height={1000}>
-        <a id="home" className="menu-item" href="/">Home</a><br/>
         <Link href="/about">
-          <a className={"color-gray"} style={{ margin: "0 5px" }}>
-            About
+          <a className={"color-gray"} style={{ margin: "0 5px" }}>About
           </a>
         </Link><br/>
-        <a id="contact" className="menu-item" href="/contact">Contact</a><br/>
-        <a className="menu-item--small" href="">Settings</a>
+        <Link href="/creators">
+          <a className={"color-gray"} style={{ margin: "0 5px" }}>Developers
+          </a>
+        </Link><br/>
+        <Link href="/more">
+          <a className={"color-gray"} style={{ margin: "0 5px" }}>More
+          </a>
+        </Link><br/>
+        <a className="menu-item--small" href="https://forms.gle/SUxQBWj76KYKhGYw7">  Feedback</a>
       </Menu>
 
     </header>

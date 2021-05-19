@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 function About() {
   return (
@@ -25,16 +24,6 @@ function About() {
           Pandemic.
         </span>
       </p>
-      <br />
-      <Link href={"/creators"}>Want to know who made this site?</Link>
-      <br />
-        <br/>
-      <a
-        href={"https://forms.gle/SUxQBWj76KYKhGYw7"}
-        className={"about__body__feedback"}
-      >
-        Give us feedback
-      </a>
         <br/>
         <br/>
         <p><a href="https://www.radiantcovid.in/"><strong>Back to Home page</strong></a></p>
