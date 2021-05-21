@@ -27,6 +27,10 @@ const CloseButton = styled(IconButton)`
 const SearchInput = styled(Input)`
   color: #d9d9d9 !important;
   caret-color: #d9d9d9;
+
+  @media only screen and (max-width: 640px) {
+    width: 50px;
+  }
 `;
 
 function Header() {
@@ -38,11 +42,11 @@ function Header() {
       position: 'fixed',
       width: '36px',
       height: '30px',
-      right: '36px',
+      right: '10px',
       top: '25px'
      },
     bmBurgerBars: {
-      background: '#373a47'
+      background: '#fff'
     },
     bmBurgerBarsHover: {
       background: '#a90000'
@@ -52,7 +56,7 @@ function Header() {
       width: '24px'
     },
     bmCross: {
-      background: '#bdc3c7'
+      background: '#fff'
     },
     bmMenuWrap: {
       position: 'fixed',
@@ -82,6 +86,7 @@ function Header() {
     setQuery(`${query}`);
   };
 
+  // @ts-ignore
   return (
     <header
       className={
@@ -104,7 +109,7 @@ function Header() {
       >
         <Search className={"color-gray"} style={{ margin: "0 5px" }} />
         <SearchInput
-          className={"flex-grow -mb-0.5 pr-8"}
+          className={"flex-grow -mb-0.5 pr-8 flex"}
           disableUnderline
           placeholder={"Search"}
           onChange={(event) => handleQueryChange(event.target.value)}
@@ -122,7 +127,7 @@ function Header() {
         </CloseButton>
       </div>
 
-      <Menu right className={'color-gray'} outerContainerId={ "outer-container" } styles={styles}  isOpen={ false } disableCloseOnEsc  width={ 400 } height={1000}>
+      <Menu right className={'color-gray'} outerContainerId={ "outer-container" } styles={styles}  isOpen={ false } disableCloseOnEsc  width={ 400 } height={800}>
         <Link href="/about">
           <a className={"color-gray"} style={{ margin: "0 5px" }}>About
           </a>
