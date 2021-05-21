@@ -25,10 +25,11 @@ const CloseButton = styled(IconButton)`
 const SearchInput = styled(Input)`
   color: #d9d9d9 !important;
   caret-color: #d9d9d9;
+  width: 50%;
 
-  @media only screen and (max-width: 640px) {
-    width: 50px;
-  }
+  //@media only screen and (max-width: 640px) {
+  //  width: 50px;
+  ////}
 `;
 
 function Header() {
@@ -40,7 +41,7 @@ function Header() {
       position: "fixed",
       width: "30px",
       height: "20px",
-      right: "0px",
+      right: "50px",
       top: "25px",
       outlineWidth: "0px"
     },
@@ -63,15 +64,12 @@ function Header() {
       background: "#000",
       padding: "2.5em 1.5em 0",
       fontSize: "1.15em",
-    },
-
+    }
   };
 
   const handleQueryChange = (query: string) => {
     setQuery(`${query}`);
   };
-
-  // @ts-ignore
   return (
     <header
       className={
@@ -81,7 +79,7 @@ function Header() {
     >
       <p
         className={
-          "pl-1 text-xl md:text-3xl lg:text-4xl font-bold justify-self-start color-gray"
+          "pl-1 text-xl md:text-3xl lg:text-4xl font-bold justify-self-start color-gray mr-auto"
         }
       >
         RIS Covid
