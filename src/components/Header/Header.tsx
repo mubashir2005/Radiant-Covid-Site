@@ -40,9 +40,10 @@ function Header() {
       position: "fixed",
       width: "30px",
       height: "20px",
-      right: "15px",
+      right: "0px",
       top: "25px",
       outlineWidth: "0px"
+
     },
     bmBurgerBars: {
       background: "#d9d9d9",
@@ -64,6 +65,7 @@ function Header() {
       padding: "2.5em 1.5em 0",
       fontSize: "1.15em",
     },
+
   };
 
   const handleQueryChange = (query: string) => {
@@ -140,6 +142,7 @@ function Header() {
         <a
         className={"color-gray"}
           href="https://forms.gle/SUxQBWj76KYKhGYw7"
+        target={'_blank'}
         >
           Feedback
         </a>

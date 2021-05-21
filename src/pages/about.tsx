@@ -9,7 +9,7 @@ function About() {
       <p className={"about__subtitle "}>
         Covid 19 Information site of
         <strong>
-          <a href="https://shortnner.tech/G4jq9xP5W">
+          <a href="https://shortnner.tech/G4jq9xP5W" target={'_blank'}>
             {" "}
             Radiant International School
           </a>
