@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link"
 
 function more() {
   return (
@@ -33,6 +34,12 @@ function more() {
         <a href="http://igims.org/" className={"more__link"}>
           <strong>IGIMS</strong>
         </a>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <Link href={"/"}><em>Back to home</em></Link>
       </div>
     </div>
   );
