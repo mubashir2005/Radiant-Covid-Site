@@ -7,9 +7,7 @@ import { Search, Clear as ClearIcon } from "@material-ui/icons";
 import filtersState from "../../atoms/filters";
 import { useRecoilState } from "recoil";
 import Link from "next/link";
-// @ts-ignore
-import { stack as Menu } from 'react-burger-menu'
-
+import { push as Menu } from "react-burger-menu";
 
 const CloseButton = styled(IconButton)`
   padding: 3px !important;
@@ -38,49 +36,35 @@ function Header() {
   const [_filters, setFilters] = useRecoilState(filtersState);
 
   const styles = {
-      bmBurgerButton: {
-      position: 'fixed',
-      width: '36px',
-      height: '30px',
-      right: '10px',
-      top: '25px'
-     },
+    bmBurgerButton: {
+      position: "fixed",
+      width: "30px",
+      height: "20px",
+      right: "15px",
+      top: "25px",
+      outlineWidth: "0px"
+    },
     bmBurgerBars: {
-      background: '#fff'
+      background: "#d9d9d9",
+      outlineWidth: "0px"
     },
     bmBurgerBarsHover: {
-      background: '#a90000'
+      background: "#a90000",
     },
     bmCrossButton: {
-      height: '24px',
-      width: '24px'
+      height: "24px",
+      width: "24px",
+      outlineWidth: "0px"
     },
     bmCross: {
-      background: '#fff'
-    },
-    bmMenuWrap: {
-      position: 'fixed',
-      height: '200%'
+      background: "#d9d9d9",
     },
     bmMenu: {
-      background: '#0d1f22',
-      padding: '2.5em 1.5em 0',
-      fontSize: '1.15em',
+      background: "#000",
+      padding: "2.5em 1.5em 0",
+      fontSize: "1.15em",
     },
-    bmMorphShape: {
-      fill: '#373a47'
-    },
-    bmItemList: {
-      color: '#d9d9d9',
-      padding: '1em'
-    },
-    bmItem: {
-      display: 'inline-block'
-    },
-    bmOverlay: {
-      background: 'rgba(0, 0, 0, 0.3)'
-    }
-  }
+  };
 
   const handleQueryChange = (query: string) => {
     setQuery(`${query}`);
@@ -127,22 +111,40 @@ function Header() {
         </CloseButton>
       </div>
 
-      <Menu right className={'color-gray'} outerContainerId={ "outer-container" } styles={styles}  isOpen={ false } disableCloseOnEsc  width={ 400 } height={800}>
+      <Menu
+        right
+        styles={styles}
+        isOpen={false}
+        disableCloseOnEsc
+        outerContainerId="outer-container"
+        pageWrapId="page-wrap"
+      >
         <Link href="/about">
-          <a className={"color-gray"} style={{ margin: "0 5px" }}>About
+          <a className={"color-gray"} style={{ margin: "0 5px" }}>
+            About
           </a>
-        </Link><br/>
+        </Link>
+        <br />
         <Link href="/creators">
-          <a className={"color-gray"} style={{ margin: "0 5px" }}>Developers
+          <a className={"color-gray"} style={{ margin: "0 5px" }}>
+            Developers
           </a>
-        </Link><br/>
+        </Link>
+        <br />
         <Link href="/more">
-          <a className={"color-gray"} style={{ margin: "0 5px" }}>More
+          <a className={"color-gray"} style={{ margin: "0 5px" }}>
+            More
           </a>
-        </Link><br/>
-        <a className="menu-item--small" href="https://forms.gle/SUxQBWj76KYKhGYw7">  Feedback</a>
+        </Link>
+        <br />
+        <a
+        className={"color-gray"}
+          style={{ margin: "0 5px" }}
+          href="https://forms.gle/SUxQBWj76KYKhGYw7"
+        >
+          Feedback
+        </a>
       </Menu>
-
     </header>
   );
 }

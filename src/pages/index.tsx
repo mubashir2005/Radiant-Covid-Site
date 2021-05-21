@@ -18,7 +18,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+
+      <main id="page-wrap">
         <App />
       </main>
     </>
