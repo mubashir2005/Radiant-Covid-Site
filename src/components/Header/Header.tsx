@@ -91,7 +91,7 @@ function Header() {
           "m-auto w-3/5 md:w-4/6 flex justify-between items-center rounded-xl py-1 px-3 background-gray"
         }
       >
-        <Search className={"color-gray"} style={{ margin: "0 5px" }} />
+        <Search className={"color-gray"} style={{ margin: "0 8px 0 0" }} />
         <SearchInput
           className={"flex-grow -mb-0.5 pr-8 flex"}
           disableUnderline
@@ -120,26 +120,26 @@ function Header() {
         pageWrapId="page-wrap"
       >
         <Link href="/more">
-          <a className={"color-gray"} style={{ margin: "0 5px" }}>
+          <a className={"color-gray"} style={{ margin: "10px 5px" }}>
             More
           </a>
         </Link>
         <br />
         <Link href="/about">
-          <a className={"color-gray"} style={{ margin: "0 5px" }}>
+          <a className={"color-gray"} style={{ margin: "10px 5px" }}>
             About
           </a>
         </Link>
         <br />
         <Link href="/creators">
-          <a className={"color-gray"} style={{ margin: "0 5px" }}>
+          <a className={"color-gray"} style={{ margin: "10px 5px" }}>
             Developers
           </a>
         </Link>
         <br />
         <a
         className={"color-gray"}
-          style={{ margin: "0 5px" }}
+          style={{ margin: "10px 5px" }}
           href="https://forms.gle/SUxQBWj76KYKhGYw7"
         >
           Feedback
