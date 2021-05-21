@@ -1,5 +1,7 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+export{}
+// @ts-ignore
+let firebaseConfig = {
     apiKey: "AIzaSyAVtPh1dveVOsC1lp2zbQs5owJiTo8NCf4",
     authDomain: "radiant-covid.firebaseapp.com",
     projectId: "radiant-covid",
