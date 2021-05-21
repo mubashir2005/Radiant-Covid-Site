@@ -119,6 +119,12 @@ function Header() {
         outerContainerId="outer-container"
         pageWrapId="page-wrap"
       >
+        <Link href="/more">
+          <a className={"color-gray"} style={{ margin: "0 5px" }}>
+            More
+          </a>
+        </Link>
+        <br />
         <Link href="/about">
           <a className={"color-gray"} style={{ margin: "0 5px" }}>
             About
@@ -128,12 +134,6 @@ function Header() {
         <Link href="/creators">
           <a className={"color-gray"} style={{ margin: "0 5px" }}>
             Developers
-          </a>
-        </Link>
-        <br />
-        <Link href="/more">
-          <a className={"color-gray"} style={{ margin: "0 5px" }}>
-            More
           </a>
         </Link>
         <br />
