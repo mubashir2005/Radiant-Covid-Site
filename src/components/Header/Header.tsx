@@ -43,7 +43,6 @@ function Header() {
       right: "0px",
       top: "25px",
       outlineWidth: "0px"
-
     },
     bmBurgerBars: {
       background: "#d9d9d9",
