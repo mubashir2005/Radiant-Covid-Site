@@ -9,7 +9,7 @@ const Creators = () => {
         <strong>Mohammed Mubashir Hasan</strong>
       </p>
       <Image
-        src="/images/mubashir.jpeg"
+        src="/images/boss.jpeg"
         height={350}
         width={300}
         alt="Mubashir"
