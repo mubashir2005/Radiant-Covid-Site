@@ -4,6 +4,7 @@ import Spinner from "../Spinner/Spinner";
 import LoadMore from "./LoadMore";
 import { VisualPicker } from "react-rainbow-components";
 import ResourceOption from "../ResourceOption/ResourceOption";
+import filtersState from "../../atoms/filters";
 import medicalResources from "../../data/medicalResources";
 import { useRecoilState } from "recoil";
 import Tweet from "../Tweet/Tweet";
@@ -14,6 +15,7 @@ import queryState from "../../atoms/query";
 function App() {
     const [tweets] = useRecoilState(tweetsState);
     const [loading, setLoading] = useState<boolean>(true);
+    const [filters] = useRecoilState(filtersState);
     const [_query, setQuery] = useRecoilState(queryState);
 
     useEffect(() => {
