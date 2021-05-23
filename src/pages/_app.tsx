@@ -7,7 +7,6 @@ import { DefaultSeo } from "next-seo";
 import React from "react";
 
 // @ts-nocheck
-
 function MyApp({ Component, pageProps }: AppProps) {
     return (
     <>
