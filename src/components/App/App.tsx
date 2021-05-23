@@ -33,7 +33,7 @@ function App() {
         return <></>;
     };
 
-    const handleMedicalResourcesChange = (_query: string) => {
+    const handleMedicalResourcesChange = (_query: any) => {
         setQuery(_query);
     };
 
