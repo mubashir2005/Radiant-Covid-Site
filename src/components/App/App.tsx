@@ -44,7 +44,7 @@ function App() {
                     id="visual-picker-component-1"
                     multiple
                     value={filters}
-                    onChange={(value) => handleMedicalResourcesChange(value as string[])}
+                    onChange={(value) => handleMedicalResourcesChange(value)}
                 >
                     {medicalResources.map((resource, index) => (
                         <ResourceOption
