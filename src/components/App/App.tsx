@@ -4,7 +4,6 @@ import Spinner from "../Spinner/Spinner";
 import LoadMore from "./LoadMore";
 import { VisualPicker } from "react-rainbow-components";
 import ResourceOption from "../ResourceOption/ResourceOption";
-import filtersState from "../../atoms/filters";
 import medicalResources from "../../data/medicalResources";
 import { useRecoilState } from "recoil";
 import Tweet from "../Tweet/Tweet";
