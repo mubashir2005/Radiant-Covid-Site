@@ -63,7 +63,7 @@ function App() {
       ))}
 
       <Error
-        errorMessage={tweets.error ? "We went into a bug. Try searching with searchbar" : "No tweets found. Please use the searchbar"}
+        errorMessage={tweets.error ? "We went into a bug." : "No tweets found."}
         // if tweets loading is false and number of tweets is 0 or there is an error
         show={(!tweets.loading && !tweets.tweets.length) || !!tweets.error}
       />
