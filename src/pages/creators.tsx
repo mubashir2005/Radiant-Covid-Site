@@ -1,5 +1,6 @@
 import React from "react";
-import Image from 'next/image'
+import Image from "next/image";
+import Link from "next/link";
 
 const Creators = () => {
   return (
@@ -11,7 +12,9 @@ const Creators = () => {
       <Image
         src="/images/boss.jpeg"
         height={350}
+        objectFit={"contain"}
         width={300}
+        objectPosition={"left"}
         alt="Mubashir"
         className={"Creators__image"}
       />
@@ -23,20 +26,26 @@ const Creators = () => {
       </p>
       <Image
         className={"Creators__image"}
-        src="https://media.discordapp.net/attachments/716852614179848193/843463071095455784/biden.jpeg"
+        src="/images/madhav.jpg"
         alt="Madhav"
+        objectFit={"contain"}
+        objectPosition={"left"}
         height={350}
         width={300}
       />
-      <p className={"Creators__something"}>I have fun with tech.</p>
+      <p className={"Creators__something"}>I like minecraft.</p>
       <p className={"Creators__dev"}>
         Want to contribute? Here's the link to the{" "}
         <a href="https://shortnner.tech/Sic9ag-Nn">
           <strong>repo</strong>
         </a>
-          <br/>
-          <br/>
-          <p><a href="https://www.radiantcovid.in/"><strong>Back to Home page</strong></a></p>
+        <br />
+        <br />
+        <p>
+          <Link href="/">
+            <strong>Back to Home page</strong>
+          </Link>
+        </p>
       </p>
     </div>
   );

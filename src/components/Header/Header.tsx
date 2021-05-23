@@ -43,11 +43,11 @@ function Header() {
       height: "20px",
       right: "50px",
       top: "25px",
-      outlineWidth: "0px"
+      outlineWidth: "0px",
     },
     bmBurgerBars: {
       background: "#d9d9d9",
-      outlineWidth: "0px"
+      outlineWidth: "0px",
     },
     bmBurgerBarsHover: {
       background: "#a90000",
@@ -55,7 +55,7 @@ function Header() {
     bmCrossButton: {
       height: "24px",
       width: "24px",
-      outlineWidth: "0px"
+      outlineWidth: "0px",
     },
     bmCross: {
       background: "#d9d9d9",
@@ -64,7 +64,7 @@ function Header() {
       background: "#000",
       padding: "2.5em 1.5em 0",
       fontSize: "1.15em",
-    }
+    },
   };
 
   const handleQueryChange = (query: string) => {
@@ -75,7 +75,6 @@ function Header() {
       className={
         "py-4 px-1 md:px-8 flex flex-row items-center border border-1 border-gray"
       }
-      id="outer-container"
     >
       <p
         className={
@@ -110,40 +109,36 @@ function Header() {
         </CloseButton>
       </div>
 
-      <Menu
-        right
-        styles={styles}
-        isOpen={false}
-        disableCloseOnEsc
-        outerContainerId="outer-container"
-        pageWrapId="page-wrap"
-      >
-        <Link href="/more">
-          <a className={"color-gray"}>
-            More
-          </a>
-        </Link>
-        <br />
-        <Link href="/about">
-          <a className={"color-gray"}>
-            About
-          </a>
-        </Link>
-        <br />
-        <Link href="/creators">
-          <a className={"color-gray"}>
-            Developers
-          </a>
-        </Link>
-        <br />
-        <a
-        className={"color-gray"}
-          href="https://forms.gle/SUxQBWj76KYKhGYw7"
-        target={'_blank'}
+      <div id="outer-container">
+        <Menu
+          right
+          styles={styles}
+          isOpen={false}
+          disableCloseOnEsc
+          outerContainerId="outer-container"
+          pageWrapId="page-wrap"
         >
-          Feedback
-        </a>
-      </Menu>
+          <Link href="/more">
+            <a className={"color-gray"}>More</a>
+          </Link>
+          <br />
+          <Link href="/about">
+            <a className={"color-gray"}>About</a>
+          </Link>
+          <br />
+          <Link href="/creators">
+            <a className={"color-gray"}>Developers</a>
+          </Link>
+          <br />
+          <a
+            className={"color-gray"}
+            href="https://forms.gle/SUxQBWj76KYKhGYw7"
+            target={"_blank"}
+          >
+            Feedback
+          </a>
+        </Menu>
+      </div>
     </header>
   );
 }
