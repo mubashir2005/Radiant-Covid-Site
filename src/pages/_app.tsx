@@ -1,14 +1,14 @@
 import type { AppProps } from "next/app";
 import { RecoilRoot } from "recoil";
-import  "../../styles/globals.scss";
+import "../../styles/globals.scss";
 import { ApolloProvider } from "@apollo/client";
 import client from "../apollo-client/client";
 import { DefaultSeo } from "next-seo";
 import React from "react";
 
-// @ts-nocheck
 function MyApp({ Component, pageProps }: AppProps) {
-    return (
+
+  return (
     <>
       <DefaultSeo
         title={"Radiant covid"}
@@ -28,8 +28,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       <RecoilRoot>
         <ApolloProvider client={client}>
-            <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover' />
-            <Component {...pageProps} />
+          <meta
+            name="viewport"
+            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
+          />
+          <Component {...pageProps} />
         </ApolloProvider>
       </RecoilRoot>
     </>
