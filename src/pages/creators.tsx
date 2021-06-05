@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { firebaseApp } from "../firebase";
 
 const Creators = () => {
+  useEffect(() => {
+    firebaseApp.analytics().logEvent("came to developers page");
+  }, []);
+
   return (
     <div className="Creators">
       <h1 className="Creators__header">Creators</h1>
@@ -43,7 +48,15 @@ const Creators = () => {
         <br />
         <p>
           <Link href="/">
-            <strong>Back to Home page</strong>
+            <strong
+              onClick={() =>
+                firebaseApp
+                  .analytics()
+                  .logEvent("moved back to home page form developers page.")
+              }
+            >
+              Back to Home page
+            </strong>
           </Link>
         </p>
       </p>

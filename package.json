@@ -25,6 +25,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "expect": "^26.6.2",
+    "firebase": "^8.6.2",
     "framer-motion": "^4.1.11",
     "graphql": "^15.5.0",
     "graphql-middleware": "^6.0.10",

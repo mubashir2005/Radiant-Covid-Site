@@ -6,6 +6,7 @@ import updateTweets from "../utils/update-tweets";
 import tweetsState from "../atoms/tweets";
 import filtersState from "../atoms/filters";
 import { useRecoilState } from "recoil";
+import { firebaseApp } from "../firebase";
 
 interface Output {
   searchTweets: DebouncedFunc<() => void>;
@@ -23,10 +24,23 @@ const useSearchTweets = (
   const [filters] = useRecoilState(filtersState);
   const [tweets, setTweets] = useRecoilState(tweetsState);
 
+
+  const logEvents = () => {
+    if (lastTweet) {
+      firebaseApp.analytics().logEvent(`loaded more tweets`, {
+        query
+      })
+    }
+
+    firebaseApp.analytics().logEvent(`searched for ${query}`, {
+      query
+    })
+  }
+
   const searchTweets = useCallback(
     debounce(() => {
       const searchAbleQuery: string = `${query} ${filters.join(" ")}`;
-      console.log("searching...", searchAbleQuery);
+      logEvents()
 
       const lastTweetId = tweets.tweets.length
         ? tweets.tweets[tweets.tweets.length - 1].id
