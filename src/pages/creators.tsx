@@ -19,7 +19,7 @@ const Creators = () => {
         className={"Creators__image"}
       />
       <p className={"Creators__something"}>
-        I am a tech geek who likes doing everything tech.
+          <a href="https://mubashirhasan.gatsbyjs.io/">Visit my site to know about me</a>
       </p>
       <p className="Creators__other__tech__guy">
         <strong>Madhav Anand</strong>
