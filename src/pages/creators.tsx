@@ -24,7 +24,7 @@ const Creators = () => {
         className={"Creators__image"}
       />
       <p className={"Creators__something"}>
-          <a href="https://mubashirhasan.gtsb.io/">Visit my site to know about me</a>
+          <a href="https://mubashirhasan.vercel.app/">Visit my site to know about me</a>
       </p>
       <p className="Creators__other__tech__guy">
         <strong>Madhav Anand</strong>
